@@ -13,6 +13,8 @@ function mergeArray() {
     };
     else {result = [...array1.split(" "), ...array2.split(" ")]};
 
-    let unique
+    let uniqueResult = [...new Set(result)].map(item => parseFloat(item))
+    console.log(uniqueResult);
+    
     
 };
