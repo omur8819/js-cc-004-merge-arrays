@@ -6,4 +6,5 @@ def merge_arrays(array1, array2):
     sorted_result = sorted(list(set(result)))
     return sorted_result
 
-resul
+result = merge_arrays(array1, array2)
+print(result)
