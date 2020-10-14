@@ -16,5 +16,5 @@ function mergeArray() {
     let uniqueResult = [...new Set(result)].map(item => parseFloat(item))
     console.log(uniqueResult);
 
-    document.querySelector("#result").innerText = uniqueResult.sort((a, b) => a - b);
+    document.querySelector("#result").innerText = uniqueResult.sort
 };
