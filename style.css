@@ -1,16 +1,83 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
 }
-div {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+main {
+  background-attachment: fixed;
+  background-image: url("https://i.stack.imgur.com/wLSu3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: #f1f2f8;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-input {
-    display: block;
+.description {
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1.5rem;
+}
+#header {
+  text-align: justify;
+  text-align: center;
+}
+#result {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: yellow;
+}
+#merged_array,
+#desc {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#merged_array {
+  color: yellow;
+}
+.inbox input {
+  width: 3vw;
+  height: 4vh;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 25px;
+}
+#button_1,
+#button_0 {
+  width: 15rem;
+  height: 1.6rem;
+  background-color: black;
+  outline: none;
+  color: aliceblue;
+  font-size: 1rem;
+  margin: 8px;
+  margin-top: 13px;
+  padding: 3px;
+}
+#button_2 {
+  width: 15rem;
+  height: 1.6rem;
+  background-color: black;
+  outline: none;
+  color: aliceblue;
+  font-size: 1rem;
+  margin: 8px;
+  margin-top: 13px;
+  padding: 3px;
+}
+#button_3 {
+  width: 5rem;
+  height: 1.6rem;
+  background-color: black;
+  outline: none;
+  color: aliceblue;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 5px;
 }

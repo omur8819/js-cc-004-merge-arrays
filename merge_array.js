@@ -1,20 +1,43 @@
-document.querySelector("button").addEventListener("click", mergeArray);
+const toFirstArray = document.querySelector("#button_0");
+const toSecondArray = document.querySelector("#button_1");
+const stopFirstArray = document.querySelector("#button_2");
+const mergeArraysBtn = document.querySelector("#button_3");
+const input = document.querySelector("#numbers");
+const desc = document.querySelector("#desc");
+const result = document.querySelector("#merged_array");
+const ArrayA = [];
+const ArrayB = [];
 
-function mergeArray() {
-    const array1 = document.querySelector("#array1").value.trim(" ");
-    const array2 = document.querySelector("#array2").value.trim(" ");
-    let result;
+toSecondArray.style.display = "none";
 
-    if(array1 === ""){
-        result = array2.split(" ");
-    };
-    else if(array2 === ""){
-        result = array1.split(" ");
-    };
-    else {result = [...array1.split(" "), ...array2.split(" ")]};
+toFirstArray.addEventListener("click", function () {
+  ArrayA.push(input.value);
+  input.value = "";
+});
 
-    let uniqueResult = [...new Set(result)].map(item => parseFloat(item))
-    console.log(uniqueResult);
+stopFirstArray.addEventListener("click", () => {
+  stopFirstArray.style.display = "none";
+  toFirstArray.style.display = "none";
+  toSecondArray.style.display = "inline";
+  let firstArray = ArrayA.join(", ");
+  desc.innerHTML = `First Array: ` + firstArray + "<br/>";
+});
 
-    document.querySelector("#result").innerText = uniqueResult.sort
-};
+toSecondArray.addEventListener("click", function () {
+  ArrayB.push(input.value);
+  console.log(ArrayB);
+  input.value = "";
+});
+
+mergeArraysBtn.addEventListener("click", function () {
+  result.innerHTML = `Merged array : ` + mergeArrays(ArrayA, ArrayB);
+});
+
+function mergeArrays(ArrayA, ArrayB) {
+  desc.innerText += "   Second Array: " + ArrayB.join(", ");
+  ArrayB.forEach((x) => {
+    ArrayA.push(parseInt(x)); 
+  });
+
+  return ArrayA.sort((a, b) => a-b).join(", ");
+}

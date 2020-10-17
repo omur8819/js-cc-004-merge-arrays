@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merge Arrays</title>
-    <script src="merge_array.js" defer></script>
+    <meta name="description" content="Find The Number with Guesses">
+    <title>Merge Array</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h2>Type your first array: </h2>
-        <input type="text" name="array1" id="array1">
-    </div>
-    <div>
-        <h2>Type your second array: </h2>
-        <input type="text" name="array2" id="array2">
-    </div>
-    <div><button>Merge Arrays</button></div>
-    <h2>[
-        <span id="result"></span>]</h2>
+    <main>
+        <section class="description">
+            <h2 id="header">Merge Arrays</h2>
+        </section>
+        <section class="inbox">
+            <input type="number" name="value" id="numbers">
+            <button type="submit" id="button_0">Add a number to 1st Array</button>
+            <button type="submit" id="button_1">Add a number to 2nd Array</button>
+            <button type="submit" id="button_2">Submit 1st Array</button>
+        </section>
+        <div>
+            <button type="submit" id="button_3" onclick="this.disabled=true;">MERGE</button>
+        </div>
+        <section class="result">
+            <p id='desc'></p>
+            <p id="merged_array"></p>
+        </section>
+        <script src="script.js"></script>
+        </script>
+    </main>
 </body>
 </html>
